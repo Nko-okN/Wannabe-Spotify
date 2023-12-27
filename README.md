@@ -1,4 +1,4 @@
-# Wannabe-Spotify
+# wannabe-spotify
 
 A data pipeline with Kafka, Spark Streaming, dbt, Docker, Airflow, Terraform, GCP and much more!
 

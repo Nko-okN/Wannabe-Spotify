@@ -57,7 +57,7 @@ docker logs --follow events_alt
 
 
 export KAFKA_ADDRESS=
-export GCS_STORAGE_PATH=gs://streamify
+export GCS_STORAGE_PATH=gs://wannabe-spotify
 
 #Stream page view events into Spark
 spark-submit \

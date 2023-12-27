@@ -13,13 +13,13 @@ We will setup Kafka and eventsim in two separate docker processes in a dedicated
 - Clone git repo and cd into Kafka folder
 
   ```bash
-  git clone https://github.com/Nko-okN/Wannabe-Spotify.git && \
+  git clone https://github.com/Nko-okN/wannabe-spotify.git && \
   ```
 
 - Install anaconda, docker & docker-compose.
 
   ```bash
-  bash ~/wannabe/scripts/vm_setup.sh && \
+  bash ~/wannabe-spotify/scripts/vm_setup.sh && \
   exec newgrp docker
   ```
 
@@ -36,7 +36,7 @@ We will setup Kafka and eventsim in two separate docker processes in a dedicated
 - Start Kafka 
 
   ```bash
-  cd ~/wannabe/kafka && \
+  cd ~/wannabe-spotify/kafka && \
   docker-compose build && \
   docker-compose up 
   ```

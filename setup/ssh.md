@@ -15,17 +15,17 @@
 - Copy the following snippet and replace with External IP of the Kafka, Spark (Master Node), Airflow VMs. Username and path to the ssh private key
 
     ```bash
-    Host streamify-kafka
+    Host wannabe-spotify-kafka
         HostName <External IP Address>
         User <username>
         IdentityFile <path/to/home/.ssh/keyfile>
 
-    Host streamify-spark
+    Host wannabe-spotify-spark
         HostName <External IP Address Of Master Node>
         User <username>
         IdentityFile <path/to/home/.ssh/keyfile>
 
-    Host streamify-airflow
+    Host wannabe-spotify-airflow
         HostName <External IP Address>
         User <username>
         IdentityFile <path/to/home/.ssh/gcp>

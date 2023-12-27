@@ -3,8 +3,8 @@
 Clone the repository in your local machine.
 
 ```bash
-git clone https://github.com/ankurchavda/streamify.git && \
-cd streamify/terraform
+git clone https://github.com/ankurchavda/wannabe-spotify.git && \
+cd wannabe-spotify/terraform
 ```
 
 Spin up the Infra -
@@ -32,8 +32,8 @@ Spin up the Infra -
     - Two `e2-medium` Worker nodes
   - A Google Cloud Storage bucket
   - Two Bigquery Datasets
-    - streamify_stg
-    - streamify_prod
+    - wannabe-spotify_stg
+    - wannabe-spotify_prod
   - Firewall rule to open port `9092` on the Kafka Instance
 
 - Apply the infra. **Note** - Billing will start as soon as the apply is complete.

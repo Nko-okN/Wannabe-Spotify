@@ -18,7 +18,7 @@ default_args ={
 
 AIRFLOW_HOME = os.environ.get('AIRFLOW_HOME', '/opt/airflow')
 
-URL = 'https://github.com/ankurchavda/streamify/raw/main/dbt/seeds/songs.csv'
+URL = 'https://github.com/ankurchavda/wannabe-spotify/raw/main/dbt/seeds/songs.csv'
 CSV_FILENAME = 'songs.csv'
 PARQUET_FILENAME = CSV_FILENAME.replace('csv', 'parquet')
 
@@ -28,7 +28,7 @@ TABLE_NAME = 'songs'
 
 GCP_PROJECT_ID = os.environ.get('GCP_PROJECT_ID')
 GCP_GCS_BUCKET = os.environ.get('GCP_GCS_BUCKET')
-BIGQUERY_DATASET = os.environ.get('BIGQUERY_DATASET', 'streamify_stg')
+BIGQUERY_DATASET = os.environ.get('BIGQUERY_DATASET', 'wannabe-spotify_stg')
 
 
 def convert_to_parquet(csv_file, parquet_file):
@@ -66,7 +66,7 @@ with DAG(
     start_date=datetime(2022,3,20),
     end_date=datetime(2022,3,20),
     catchup=True,
-    tags=['streamify']
+    tags=['wannabe-spotify']
 ) as dag:
 
     download_songs_file_task = BashOperator(

@@ -13,13 +13,13 @@ We will setup airflow on docker in a dedicated compute instance. dbt is setup in
 - Clone git repo
 
   ```bash
-  git clone https://github.com/Nko-okN/Wannabe-Spotify.git && \
-  cd Wannabe-Spotify
+  git clone https://github.com/Nko-okN/wannabe-spotify.git && \
+  cd wannabe-spotify
   ```
 - Install anaconda, docker & docker-compose.
 
   ```bash
-  bash ~/Wannabe-Spotify/scripts/vm_setup.sh && \
+  bash ~/wannabe-spotify/scripts/vm_setup.sh && \
   exec newgrp docker
   ```
 - Move the service account json file from local to the VM machine in `~/.google/credentials/` directory.  Make sure it is named as `google_credentials.json`  else the dags will fail!
@@ -42,7 +42,7 @@ We will setup airflow on docker in a dedicated compute instance. dbt is setup in
 - Start Airflow. (This shall take a few good minutes, grab a coffee!)
 
   ```bash
-  bash ~/Wannabe-Spotify/scripts/airflow_startup.sh && cd ~/Wannabe-Spotify/airflow
+  bash ~/wannabe-spotify/scripts/airflow_startup.sh && cd ~/wannabe-spotify/airflow
   ```
 
 - Airflow should be available on port `8080` a couple of minutes after the above setup is complete. Login with default username & password as **airflow**.
@@ -69,7 +69,7 @@ The setup has two dags
 - `wannabe_dag`
   - Trigger after `load_songs_dag` to make sure the songs table table is available for the transformations
   - This dag will run hourly at the 5th minute and perform transformations to create the dimensions and fact.
-![streamify_dag](../images/dag.png)
+![wannabe-spotify_dag](../images/dag.png)
 
   - DAG Flow -
     - We first create an external table for the data that was received in the past hour.

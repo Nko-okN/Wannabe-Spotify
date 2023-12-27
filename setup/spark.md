@@ -12,8 +12,8 @@ We will start the Spark Streaming process in the DataProc cluster we created to 
 - Clone git repo
 
   ```bash
-  git clone https://github.com/Nko-okN/Wannabe-Spotify.git && \
-  cd Wannabe-Spotify/spark_streaming
+  git clone https://github.com/Nko-okN/wannabe-spotify.git && \
+  cd wannabe-spotify/spark_streaming
   ```
 
 - Set the evironment variables -
