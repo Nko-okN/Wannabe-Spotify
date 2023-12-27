@@ -7,19 +7,19 @@ We will setup airflow on docker in a dedicated compute instance. dbt is setup in
 - Establish SSH connection
 
   ```bash
-  ssh streamify-airflow
+  ssh wannabe-airflow
   ```
 
 - Clone git repo
 
   ```bash
-  git clone https://github.com/ankurchavda/streamify.git && \
-  cd streamify
+  git clone https://github.com/Nko-okN/Wannabe-Spotify.git && \
+  cd Wannabe-Spotify
   ```
 - Install anaconda, docker & docker-compose.
 
   ```bash
-  bash ~/streamify/scripts/vm_setup.sh && \
+  bash ~/Wannabe-Spotify/scripts/vm_setup.sh && \
   exec newgrp docker
   ```
 - Move the service account json file from local to the VM machine in `~/.google/credentials/` directory.  Make sure it is named as `google_credentials.json`  else the dags will fail!
@@ -42,7 +42,7 @@ We will setup airflow on docker in a dedicated compute instance. dbt is setup in
 - Start Airflow. (This shall take a few good minutes, grab a coffee!)
 
   ```bash
-  bash ~/streamify/scripts/airflow_startup.sh && cd ~/streamify/airflow
+  bash ~/Wannabe-Spotify/scripts/airflow_startup.sh && cd ~/Wannabe-Spotify/airflow
   ```
 
 - Airflow should be available on port `8080` a couple of minutes after the above setup is complete. Login with default username & password as **airflow**.
@@ -66,7 +66,7 @@ The setup has two dags
   - Trigger first and only once to load a onetime song file into BigQuery
 ![songs_dag](../images/songs_dag.png)
 
-- `streamify_dag`
+- `wannabe_dag`
   - Trigger after `load_songs_dag` to make sure the songs table table is available for the transformations
   - This dag will run hourly at the 5th minute and perform transformations to create the dimensions and fact.
 ![streamify_dag](../images/dag.png)
