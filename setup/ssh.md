@@ -34,15 +34,15 @@
 - Once you are setup, you can simply SSH into the servers using the below commands in separate terminals. Do not forget to change the IP address of VM restarts.
 
     ```bash
-    ssh streamify-kafka
+    ssh wannabe-kafka
     ```
 
     ```bash
-    ssh streamify-spark
+    ssh wannabe-spark
     ```
 
     ```bash
-    ssh streamify-airflow
+    ssh wannabe-airflow
     ```
 
 - You will have to forward ports from your VM to your local machine for you to be able to see Kafka, Airflow UI. Check how to do that [here](https://youtu.be/ae-CV2KfoN0?t=1074)
