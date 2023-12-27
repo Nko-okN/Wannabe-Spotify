@@ -7,13 +7,13 @@ We will start the Spark Streaming process in the DataProc cluster we created to 
 - Establish SSH connection to the **master node**
 
   ```bash
-  ssh streamify-spark
+  ssh wannabe-spark
   
 - Clone git repo
 
   ```bash
-  git clone https://github.com/ankurchavda/streamify.git && \
-  cd streamify/spark_streaming
+  git clone https://github.com/Nko-okN/Wannabe-Spotify.git && \
+  cd Wannabe-Spotify/spark_streaming
   ```
 
 - Set the evironment variables -
