@@ -7,19 +7,19 @@ We will setup Kafka and eventsim in two separate docker processes in a dedicated
 - Establish SSH connection
 
   ```bash
-  ssh streamify-kafka
+  ssh wannabe-kafka
   ```
 
 - Clone git repo and cd into Kafka folder
 
   ```bash
-  git clone https://github.com/ankurchavda/streamify.git && \
+  git clone https://github.com/Nko-okN/Wannabe-Spotify.git && \
   ```
 
 - Install anaconda, docker & docker-compose.
 
   ```bash
-  bash ~/streamify/scripts/vm_setup.sh && \
+  bash ~/wannabe/scripts/vm_setup.sh && \
   exec newgrp docker
   ```
 
@@ -36,7 +36,7 @@ We will setup Kafka and eventsim in two separate docker processes in a dedicated
 - Start Kafka 
 
   ```bash
-  cd ~/streamify/kafka && \
+  cd ~/wannabe/kafka && \
   docker-compose build && \
   docker-compose up 
   ```
@@ -48,7 +48,7 @@ We will setup Kafka and eventsim in two separate docker processes in a dedicated
 - Open another terminal session for the Kafka VM and start sending messages to your Kafka broker with Eventsim
 
   ```bash
-  bash ~/streamify/scripts/eventsim_startup.sh
+  bash ~/wannabe/scripts/eventsim_startup.sh
   ```
 
   This will start creating events for 1 Million users spread out from the current time to the next 24 hours. 
@@ -69,12 +69,3 @@ We will setup Kafka and eventsim in two separate docker processes in a dedicated
   - auth_events
   - status_change_events
   ![topics](../images/topics.png)
-
-- **Note:** If you happen to re-rerun the evenstim container and face the following error -
-  
-  >docker: Error response from daemon: Conflict. The container name "/million_events" is already in use by container
-  
-  then run the below command
-  ```bash
-  docker system prune
-  ```
