@@ -35,13 +35,13 @@ variable "network" {
 
 variable "stg_bq_dataset" {
   description = "Storage class type for your bucket. Check official docs for more info."
-  default     = "Wannabe_stg"
+  default     = "wannabe_spotify_stg"
   type        = string
 }
 
 variable "prod_bq_dataset" {
   description = "Storage class type for your bucket. Check official docs for more info."
-  default     = "Wannabe_prod"
+  default     = "wannabe_spotify_prod"
   type        = string
 }
 
